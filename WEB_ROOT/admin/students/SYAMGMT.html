@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Saskatchewan Youth Apprenticeship Passport Created by Cruise Slater - v1.0 01/01/2016  -->
+<!-- Future Version Comments -->
+
+<title>SYA Passport</title>
+<!-- required scripts -->
+	~[wc:commonscripts] 
+<!-- Required style sheets: screen.css, and print.css -->
+	<link href="/images/css/screen.css" rel="stylesheet" media="screen">
+	<link href="/images/css/print.css" rel="stylesheet" media="print">
+</head> 
+<body> 
+	~[wc:admin_header_frame_css]
+	<!-- breadcrumb start -->
+		<a href="/admin/home.html" target="_top">Start Page</a> &gt; <a href="/admin/students/home.html?selectstudent=nosearch" target="_top">Student Selection</a> &gt; SYA Passport
+	<!-- breadcrumb end -->
+~[wc:admin_navigation_frame_css]
+<!-- start of main menu and content -->
+~[wc:title_student_begin_css]SYA Passport~[wc:title_student_end_css]
+<form action="/~[self.page]?frn=~(studentfrn)&changesSaved=true" method="POST">
+<!-- start of content area -->
+~[if.~(gpv.changesSaved)=true]<div class="feedback-confirm">~[text:psx.common.changes_recorded]</div>[/if]
+	<div class="tabs">
+    <ul class="group">
+        <li><a href="#tabOneContent">Contract</a></li>
+        <li><a href="#tabTwoContent">Introductory</a></li>
+        <li><a href="#tabThreeContent">Intermediate</a></li>
+		<li><a href="#tabFourContent">Senior</a></li>
+    </ul>
+<div id="tabOneContent">
+       	<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+		<!--Following caption will produce a docked dialog on the right hand side when clicked; content placed with a hidden div outside of form -->
+   <CAPTION><a class="dialogDiv dockedDialog" title="Plain Div Drawer" href="#entryRequirements">Entry Requirements</a></CAPTION> 
+   <tbody> 
+   <p>After verification of the <a class="dialogDiv dockedDialog" title="Entry Requirements" href="#entryRequirements">Entry Requirements</a></CAPTION>, students receive and sign a SYA contract supplied by the Saskatchewan Apprenticeship and Trade Certification Commission (SATCC). This contract must be sent in prior to sending in recognition of completion of the SYA program.<a href="http://www.saskapprenticeship.ca/youth_apprentices/" target="_blank"> (Click for Contract) </a>
+   </p>
+     <tr> 
+       <td><b>Last Name:</b> ~([01]last_name)</td> 
+	   <td><b>First Name:</b> ~([01]first_name)</td> 
+	   <td><b>Middle Name:</b> ~([01]middle_name)</td> 
+     </tr> 
+	 <tr> 
+       <td><b>Address:</b> ~([01]street)</td> 
+	   <td><b>City/Town:</b> ~([01]city)</td> 
+	   <td><b>Postal Code:</b> ~([01]zip)</td> 
+     </tr>
+	 <tr> 
+       <td><b>Student Number:</b> ~(state_studentnumber)</td> 
+	   <td><b>DOB:</b> ~([01]DOB)</td> 
+	   <td><b>Phone:</b> ~([01]home_phone)</td> 
+     </tr>
+	 <tr> 
+	   <td><b>School ID:</b> ~(schoolID)</td> 
+	   <td><b>Division ID:</b> 6710000</td> 
+     </tr>
+	 </tbody>
+	 </table>
+</div>
+<div id="tabTwoContent">
+<!--Following caption will produce a docked dialog on the right hand side when clicked; content placed with a hidden div outside of form -->
+   <label style="width: 140px"><a class="dialogDiv dockedDialog" title="Challenge Descriptions" href="#hiddenChallengeDescriptions">Challenge Descriptions</a></label>
+   <!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th>Challenge</th> 
+       <th>Info</th> 
+	   <th>Signature (Teacher)</th> 
+	   <th>Date of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td>Course&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA11course" value="" size="40" /></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA11signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA11date" value="" size="10" /></td>
+     </tr> 
+     <tr> 
+        <td>Challenge 2</td> 
+       <td>Trade&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA12trade" value="" size="40" /></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA12signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA12date" value="" size="10" /></td>
+     </tr> 
+	 <tr> 
+        <td>Challenge 3</td> 
+	   <td></td>
+       <td><input type="text" name="[Students.U_SYA]SYA13signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA13date" value="" size="10" /></td>
+     </tr> 
+	 <tr> 
+       <td rowspan="2">Challenge 4</td> 
+       <td>Interviewee&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA14interviewee" value="" size="40" /></td> 
+       <td rowspan="2"><input type="text" name="[Students.U_SYA]SYA14signature" value="" size="40" /></td> 
+	   <td rowspan="2"><input type="text" name="[Students.U_SYA]SYA14date" value="" size="10" /></td>
+     </tr> 
+	 <tr> 
+		<td>Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA14title" value="" size="40" /></td> 
+		<td></td>
+		<td></td>
+		<td></td>
+     </tr> 
+	</tbody> 
+   </table>
+<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th colspan="3">Recognition of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody>
+	 <tr> 
+        <td>Introductory Modules Complete?&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA1Xcomplete" value="1">Yes</input>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA1Xcomplete" value="0">No</td> 
+        <td>Certifying Official&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA1Xsignature" value="" size="40" /></td> 
+	   <td>Date of Completion&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA1Xdate" value="" size="10" /></td>
+     </tr> 
+    </tbody> 
+   </table> 
+</div>
+<div id="tabThreeContent">
+<!--Following LINK will produce a docked dialog on the right hand side when clicked; content placed with a hidden div outside of form -->
+<label style="width: 140px"><a class="dialogDiv dockedDialog" title="Challenge Descriptions" href="#hiddenChallengeDescriptions">Challenge Descriptions</a></label>
+<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th>Challenge</th> 
+       <th>Info</th> 
+	   <th>Signature (Teacher)</th> 
+	   <th>Date of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td>Course&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA21course" value="" size="40" /></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA21signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA21date" value="" size="10" /></td>
+    </tr> 
+	<tr> 
+       <td rowspan="2">Challenge 2</td> 
+       <td>Interviewee&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA22interviewee" value="" size="40" /></td> 
+       <td rowspan="2"><input type="text" name="[Students.U_SYA]SYA22signature" value="" size="40" /></td> 
+	   <td rowspan="2"><input type="text" name="[Students.U_SYA]SYA22date" value="" size="10" /></td>
+     </tr>
+	 <tr> 
+       <td>Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA22title" value="" size="40" /></td> 
+     </tr>
+	 <tr> 
+       <td>Challenge 3</td> 
+       <td></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA23signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA23date" value="" size="10" /></td>
+     </tr>
+	 <tr> 
+       <td>Challenge 4</td> 
+       <td>URL&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA24URL" value="" size="75" /></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA24signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA24date" value="" size="10" /></td>
+     </tr>
+	 <tr> 
+	 </tbody> 
+   </table>
+<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th colspan="3">Recognition of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody>
+	 <tr> 
+        <td>Intermediate Modules Complete?&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA1Xcomplete" value="1">Yes</input>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA2Xcomplete" value="0">No</td> 
+        <td>Certifying Official&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA2Xsignature" value="" size="40" /></td> 
+	   <td>Date of Completion&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA2Xdate" value="" size="10" /></td>
+     </tr> 
+    </tbody> 
+   </table> 
+</div>
+<div id="tabFourContent">
+<!--Following LINK will produce a docked dialog on the right hand side when clicked; content placed with a hidden div outside of form -->
+   <label style="width: 140px"><a class="dialogDiv dockedDialog" title="Challenge Descriptions" href="#hiddenChallengeDescriptions">Challenge Descriptions</a></label>
+<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th></th> 
+       <th>Challenge Info</th> 
+	   <th>Signature</th> 
+	   <th>Date of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA31signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA31date" value="" size="10" /></td>
+    </tr>
+	<tr> 
+       <td>Challenge 2</td> 
+       <td>Option:&nbsp;&nbsp;<select name="[Students.U_SYA]SYA32option" id="Chal2Option">
+			<option value="">Select</option>
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+	   </td> 
+       <td><input type="text" name="[Students.U_SYA]SYA32signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA32date" value="" size="10" /></td>
+    </tr>
+	<tr> 
+       <td>Challenge 3</td> 
+       <td></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA33signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA33date" value="" size="10" /></td>
+    </tr>
+	<tr> 
+       <td>Challenge 4</td> 
+       <td></td> 
+       <td><input type="text" name="[Students.U_SYA]SYA34signature" value="" size="40" /></td> 
+	   <td><input type="text" name="[Students.U_SYA]SYA34date" value="" size="10" /></td>
+    </tr>
+	<tr> 
+	</tbody> 
+   </table>
+<!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="linkDescList" id="IntroductoryModules"> 
+   <thead> 
+     <tr> 
+       <th colspan="3">Recognition of Completion</th> 
+     </tr> 
+   </thead> 
+   <tbody>
+	 <tr> 
+        <td>Intermediate Modules Complete?&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA1Xcomplete" value="1">Yes</input>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="[Students.U_SYA]SYA3Xcomplete" value="0">No</td> 
+        <td>Certifying Official&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA3Xsignature" value="" size="40" /></td> 
+	   <td>Date of Completion&nbsp;&nbsp;<input type="text" name="[Students.U_SYA]SYA3Xdate" value="" size="10" /></td>
+     </tr> 
+    </tbody> 
+   </table> 
+</div>
+</div>
+<div class="button-row"><input type="hidden" name="ac" value="prim">~[submitbutton]</div>
+</form>
+
+<div id="entryRequirements" class="hide">
+<!-- Entry Requirements were copied from "Saskatchewan Youth Apprenticeship (2009), published by Saskatchewan Apprenticeship and Trade Certification Commission-->
+<p>The following criteria must be met:</p>
+<ol>
+<li>Registered as a Saskatchewan secondary student.</li>
+<li>Must be at least 15 years of age.</li>
+<li>must meet one of the following criteria:</li>
+<ul>
+<li>Experience with part-time or seasonal employment</li>
+<li>Registered in a trade-related Practical and Applied Arts class</li>
+<li>Registered in a trade-related locally developed course</li>
+<li>Registered in Career and Work Exploration 10, 20, or 30</li>
+<li>Registered in a PAA survey course with at least one third trade-related content</li>
+</ul>
+</ol>
+</div>
+
+<div id="hiddenChallengeDescriptions" class="hide">
+<!-- Challenge Descriptions were copied from "Saskatchewan Youth Apprenticeship (2009), published by Saskatchewan Apprenticeship and Trade Certification Commission-->
+<div class="tabs">
+    <ul class="group">
+        <li><a href="#introChallenge">Introductory</a></li>
+        <li><a href="#interChallenge">Intermediate</a></li>
+        <li><a href="#seniorChallenge">Senior</a></li>
+    </ul>
+    <div id="introChallenge">
+        <!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="grid" id="tableUniqueID"> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td>Successful completion of a Practical and Applied Arts credit.</td> 
+     </tr> 
+     <tr> 
+       <td>Challenge 2</td> 
+       <td>Research and report on one of the designated trades in Saskatchewan, include the training requirements of the trade selected.</td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 3</td> 
+       <td>Completion of Young Worker Readiness Certificate Course.</td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 4</td> 
+       <td>Initiate a discussion about apprenticeship and trades careers with an adult in your community.</td> 
+     </tr> 
+    </tbody> 
+   </table>
+    </div>
+    <div id="interChallenge">
+        <!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="grid" id="tableUniqueID"> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td>Successful completion of a second credit in Practical and Applied Arts.</td> 
+     </tr> 
+     <tr> 
+       <td>Challenge 2</td> 
+       <td>Complete an interview with a journeyperson.</td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 3</td> 
+       <td>Complete one of the following 
+		<ul>
+			<li>Design and display a possible career pathway chart for a trade</li>
+			<li>List the four basic steps to obtain journeyperson certification</li>
+		</ul>
+	</td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 4</td> 
+       <td>Explore a web-based resource connected to apprenticeship.</td> 
+     </tr> 
+    </tbody> 
+   </table>
+    </div>
+    <div id="seniorChallenge">
+        <!-- This is a standards driven table. there are no styles, borders, widths and there is a header row--> 
+   <table border="0" cellpadding="0" cellspacing="0" class="grid" id="tableUniqueID"> 
+   <tbody> 
+     <tr> 
+       <td>Challenge 1</td> 
+       <td>Completion of Apprenticeship Terminology. </td> 
+     </tr> 
+     <tr> 
+       <td>Challenge 2</td> 
+       <td>Complete at least one of the following intensive work-related experiences: 
+	   <ul>
+			<li>A. spend at least one full day job shadowing a tradesperson. </li>
+			<li>B. spend at least one full day with a community leader (e.g. chief, counsellor, elder’s helper). </li>
+			<li>C. participate in a trade-related work placement for Career and Work Exploration.</li>
+		</ul>
+	   </td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 3</td> 
+       <td>Create a portfolio including apprenticeship related learning.</td> 
+     </tr> 
+	  <tr> 
+       <td>Challenge 4</td> 
+       <td>Attend a career fair to collect information to compare apprenticeship training with another form of post-secondary opportunity.</td> 
+     </tr> 
+    </tbody> 
+   </table>
+    </div>
+</div>
+</div>
+<!-- end of content area -->
+	~[wc:admin_footer_frame_css]
+</body> 
+</html>

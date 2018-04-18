@@ -1,0 +1,20 @@
+<!-- Saskatchewan Youth Apprenticeship Passport Created by Cruise Slater - v1.0 01/01/2016  -->
+<!-- Future Version Comments -->
+
+<script>
+$j("h1").append('\
+<span style="align:right;position:relative;z-index:10;">\
+~[if#SYA1.~([Students.U_SYA]SYA1Xcomplete)=1]\
+<img src="/images/GreenButton.svg" title="Lvl1 Complete">\
+[else#SYA1]<img src="/images/RedButton.svg" title="Lvl1 Not Complete">\
+[/if#SYA1]\
+~[if#SYA1.~([Students.U_SYA]SYA2Xcomplete)=1]\
+<img src="/images/GreenButton.svg" title="Lvl2 Complete">\
+[else#SYA1]<img src="/images/RedButton.svg" title="Lvl2 Not Complete">\
+[/if#SYA1]\
+~[if#SYA1.~([Students.U_SYA]SYA3Xcomplete)=1]\
+<img src="/images/GreenButton.svg" title="Lvl 3 Complete">\
+[else#SYA1]<img src="/images/RedButton.svg" title="Lvl 3 Not Complete">\
+[/if#SYA1]\
+</span>')
+</script>

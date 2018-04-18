@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<psExtension xmlns="http://www.powerschool.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.powerschool.com psextension.xsd">
+    <extensionname>U_SYA</extensionname>
+    <extendedTable coreTable="Students" dbTableName="U_SYA" comment="Main Sask Youth Appren. Table ">
+        <field name="SYA22signature" type="String" length="40" comment="Field for tracking signature for Inter. level module 2."/>
+        <field name="SYA22date" type="Date" comment="Field for tracking completion date for Inter. level module 2"/>
+        <field name="SYA31signature" type="String" length="40" comment="Field for tracking signature for Senior level module 1"/>
+        <field name="SYA13date" type="Date" comment="Field for tracking completion date for Intro. level module 3."/>
+        <field name="SYA24URL" type="String" length="150" comment="Field for tracking website URL for Inter. level module 4"/>
+        <field name="SYA34signature" type="String" length="40" comment="Field for tracking signature for Senior level module 4"/>
+        <field name="SYA11signature" type="String" length="40" comment="Field for tracking signature for Intro. level module 1."/>
+        <field name="SYA23date" type="Date" comment="Field for tracking completion date for Inter. level module 3"/>
+        <field name="SYA14signature" type="String" length="40" comment="Field for tracking signature for Intro. level module 4."/>
+        <field name="SYA23signature" type="String" length="40" comment="Field for tracking signature for Inter. level module 3"/>
+        <field name="SYA1Xcertoff" type="String" length="40" comment="Field for tracking certifying official's name for Introductory Modules of the SYA Program."/>
+        <field name="SYA2Xcomplete" type="Boolean" defaultValue="0" comment="Field for tracking completion of Intermediate level modules for the SYA Program"/>
+        <field name="SYA31date" type="Date" comment="Field for tracking date for Senior level module 1"/>
+        <field name="SYA32date" type="Date" comment="Field for tracking completion date for Senior level module 2"/>
+        <field name="SYA32signature" type="String" length="40" comment="Field for tracking signature for Senior level module 2"/>
+        <field name="SYA22interviewee" type="String" length="40" comment="Field for tracking interviewee name for Inter. level module 2"/>
+        <field name="SYA14date" type="Date" comment="Field for tracking completion date for Intro. level module 4."/>
+        <field name="SYA1Xdate" type="Date" comment="Field for tracking completion date for Introductory Modules of the SYA Program."/>
+        <field name="SYA3Xcertoff" type="String" length="40" comment="Field for tracking certifiying official of Senior level modules for the SYA Program"/>
+        <field name="SYA33date" type="Date" comment="Field for tracking completion date for Senior level module 3"/>
+        <field name="SYA12signature" type="String" length="40" comment="Field for tracking trade for Intro. level module 2."/>
+        <field name="SYA21signature" type="String" length="40" comment="Field for tracking signature for Inter. level module 1"/>
+        <field name="SYA24signature" type="String" length="40" comment="Field for tracking signature for Inter. level module 4"/>
+        <field name="SYA2Xcertoff" type="String" length="40" comment="Field for tracking certifying official for the intermediate level modules of the SYA program. "/>
+        <field name="SYA12trade" type="String" length="40" comment="Field for tracking trade for Intro. level module 2."/>
+        <field name="SYA2Xdate" type="Date" comment="Field for tracking completion date of all intermediate modules for the SYA Program."/>
+        <field name="SYA3Xcomplete" type="Boolean" defaultValue="0" comment="Field for tracking completion of Senior level modules for the SYA Program"/>
+        <field name="SYA24date" type="Date" comment="Field for tracking completion date for Inter. level module 1"/>
+        <field name="SYA11date" type="Date" comment="Field for tracking completion date for Intro. level module 1."/>
+        <field name="SYA32option" type="String" length="40" comment="Field for tracking chosen option for Senior level module 2"/>
+        <field name="SYA34date" type="Date" comment="Field for tracking completion date for Senior level module 4"/>
+        <field name="SYA14title" type="String" length="60" comment="Field for tracking interviewee job title for Intro. level module 4."/>
+        <field name="SYA33signature" type="String" length="40" comment="Field for tracking signature for Senior level module 3"/>
+        <field name="SYA21date" type="Date" comment="Field for tracking completion date for Inter. level module 1"/>
+        <field name="SYA3Xdate" type="Date" comment="Field for tracking completion date of Senior level modules for the SYA Program"/>
+        <field name="SYA11course" type="String" length="40" comment="Field for tracking course name for Intro. level module 1."/>
+        <field name="SYA1Xcomplete" type="Boolean" defaultValue="0" comment="Field for tracking completion of Introductory Modules of the SYA Program. "/>
+        <field name="SYA21course" type="String" length="40" comment="Field for tracking course for Inter. level module 1."/>
+        <field name="SYA22title" type="String" length="40" comment="Field for tracking interviewee's job title for Inter. level module 2"/>
+        <field name="SYA14interviewee" type="String" length="60" comment="Field for tracking interviewee for Intro. level module 4."/>
+        <field name="SYA12date" type="Date" comment="Field for tracking completion date for Intro. level module 2."/>
+        <field name="SYA13signature" type="String" length="40" comment="Field for tracking signature for Intro. level module 3."/>
+    </extendedTable>
+</psExtension>

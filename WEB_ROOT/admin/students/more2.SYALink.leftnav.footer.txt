@@ -1,0 +1,20 @@
+<!-- Saskatchewan Youth Apprenticeship Passport Created by Cruise Slater - v1.0 01/01/2016  -->
+<!-- Future Version Comments -->
+
+<!--Credit: Adam Larsen  Thanks for sharing the following snippet to help manage links :) -->
+
+<script>
+  $j(document).ready(function()
+    {
+      $j("ul#std_academics").append("<li><a href='SYAMGMT.html?frn=~(studentfrn)'>SYA Passport</a></li>");
+      
+      $j("ul#std_academics li").sort(function(a,b)
+        {
+          if($j(a).text() < $j(b).text()) return -1;
+          if($j(a).text() > $j(b).text()) return 1;
+          return 0;
+        }
+      ).appendTo("ul#std_academics");
+    }
+  );
+</script>
